@@ -1,3 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿Console.WriteLine("Welcome to Random Rotate Sort");
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("This is just an idea I had while trying to sleep, and wanted to do this for fun on a random Sunday.");
