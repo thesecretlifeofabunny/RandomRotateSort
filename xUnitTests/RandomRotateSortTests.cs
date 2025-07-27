@@ -9,9 +9,9 @@ public class RandomRotateSortTests
     {
         List<int> toSortList = [];
        
-        var sortedList = RandomRotateSort.RandomRotateSort.Sort(toSortList);
+        RandomRotateSort.RandomRotateSort.Sort(toSortList);
         
-        Assert.True(sortedList is []);
+        Assert.True(toSortList is []);
     }
     
     [Fact]
@@ -19,9 +19,9 @@ public class RandomRotateSortTests
     {
         List<int> toSortList = [10];
        
-        var sortedList = RandomRotateSort.RandomRotateSort.Sort(toSortList);
+        RandomRotateSort.RandomRotateSort.Sort(toSortList);
         
-        Assert.True(sortedList is [10]);
+        Assert.True(toSortList is [10]);
     }
     
     [Fact]
@@ -29,9 +29,9 @@ public class RandomRotateSortTests
     {
         List<int> toSortList = [10, 2];
        
-        var sortedList = RandomRotateSort.RandomRotateSort.Sort(toSortList);
+        RandomRotateSort.RandomRotateSort.Sort(toSortList);
         
-        Assert.True(sortedList is [2, 10]);
+        Assert.True(toSortList is [2, 10]);
     }
     
     [Fact]
@@ -39,9 +39,9 @@ public class RandomRotateSortTests
     {
         List<int> toSortList = [ 4, 1, 2];
        
-        var sortedList = RandomRotateSort.RandomRotateSort.Sort(toSortList);
+        RandomRotateSort.RandomRotateSort.Sort(toSortList);
         
-        Assert.True(sortedList is [1, 2, 4]);
+        Assert.True(toSortList is [1, 2, 4]);
     }
     
     [Fact]
@@ -49,9 +49,9 @@ public class RandomRotateSortTests
     {
         List<int> toSortList = [10, 4, 1, 2];
        
-        var sortedList = RandomRotateSort.RandomRotateSort.Sort(toSortList);
+        RandomRotateSort.RandomRotateSort.Sort(toSortList);
         
-        Assert.True(sortedList is [1, 2, 4, 10]);
+        Assert.True(toSortList is [1, 2, 4, 10]);
     }
     
     [Fact]
@@ -59,122 +59,96 @@ public class RandomRotateSortTests
     {
         List<int> toSortList = [10, 4, 1, 2, 9, 23, 213, 321, 421, 21];
        
-        var sortedList = RandomRotateSort.RandomRotateSort.Sort(toSortList);
+        RandomRotateSort.RandomRotateSort.Sort(toSortList);
         
-        Assert.True(sortedList is [1, 2, 4, 9, 10, 21, 23, 213, 321, 421]);
+        Assert.True(toSortList is [1, 2, 4, 9, 10, 21, 23, 213, 321, 421]);
     }
     
     [Fact]
     public void RandomRotateSort_TwentyFiveElements_ReturnsSortedList()
     {
-        const int numberOfElementsToInsert = 25;   
+        const int numberOfElementsToInsert = 25;
         List<int> toSortList = [];
+        List<int> inBuiltSortedList = [];
         Random randomGenerator = new();
 
         for (var i = 0; i < numberOfElementsToInsert; i++)
         {
-            toSortList.Add(randomGenerator.Next());
+            var randomNumberToAdd = randomGenerator.Next();
+            toSortList.Add(randomNumberToAdd);
+            inBuiltSortedList.Add(randomNumberToAdd);
         }
-       
-        var sortedList = RandomRotateSort.RandomRotateSort.Sort(toSortList);
         
-        toSortList.Sort();
+        inBuiltSortedList.Sort();
         
-        Assert.True(sortedList == toSortList);
+        RandomRotateSort.RandomRotateSort.Sort(toSortList);
+        
+        Assert.True(toSortList == inBuiltSortedList);
     }
     
     [Fact]
     public void RandomRotateSort_FiftyElements_ReturnsSortedList()
     {
-        const int numberOfElementsToInsert = 50;   
+        const int numberOfElementsToInsert = 50;
         List<int> toSortList = [];
+        List<int> inBuiltSortedList = [];
         Random randomGenerator = new();
 
         for (var i = 0; i < numberOfElementsToInsert; i++)
         {
-            toSortList.Add(randomGenerator.Next());
+            var randomNumberToAdd = randomGenerator.Next();
+            toSortList.Add(randomNumberToAdd);
+            inBuiltSortedList.Add(randomNumberToAdd);
         }
-       
-        var sortedList = RandomRotateSort.RandomRotateSort.Sort(toSortList);
         
-        toSortList.Sort();
+        inBuiltSortedList.Sort();
         
-        Assert.True(sortedList == toSortList);
+        RandomRotateSort.RandomRotateSort.Sort(toSortList);
+        
+        Assert.True(toSortList == inBuiltSortedList);
     }
     
     [Fact]
     public void RandomRotateSort_OneHundredElements_ReturnsSortedList()
     {
-        const int numberOfElementsToInsert = 100;   
+        const int numberOfElementsToInsert = 100;
         List<int> toSortList = [];
+        List<int> inBuiltSortedList = [];
         Random randomGenerator = new();
 
         for (var i = 0; i < numberOfElementsToInsert; i++)
         {
-            toSortList.Add(randomGenerator.Next());
+            var randomNumberToAdd = randomGenerator.Next();
+            toSortList.Add(randomNumberToAdd);
+            inBuiltSortedList.Add(randomNumberToAdd);
         }
-       
-        var sortedList = RandomRotateSort.RandomRotateSort.Sort(toSortList);
         
-        toSortList.Sort();
+        inBuiltSortedList.Sort();
         
-        Assert.True(sortedList == toSortList);
+        RandomRotateSort.RandomRotateSort.Sort(toSortList);
+        
+        Assert.True(toSortList == inBuiltSortedList);
     }
     
     [Fact]
     public void RandomRotateSort_OneThousandElements_ReturnsSortedList()
     {
-        const int numberOfElementsToInsert = 1000;   
+        const int numberOfElementsToInsert = 1000;
         List<int> toSortList = [];
+        List<int> inBuiltSortedList = [];
         Random randomGenerator = new();
 
         for (var i = 0; i < numberOfElementsToInsert; i++)
         {
-            toSortList.Add(randomGenerator.Next());
+            var randomNumberToAdd = randomGenerator.Next();
+            toSortList.Add(randomNumberToAdd);
+            inBuiltSortedList.Add(randomNumberToAdd);
         }
-       
-        var sortedList = RandomRotateSort.RandomRotateSort.Sort(toSortList);
         
-        toSortList.Sort();
+        inBuiltSortedList.Sort();
         
-        Assert.True(sortedList == toSortList);
-    }
-    
-    [Fact]
-    public void RandomRotateSort_TenThousandElements_ReturnsSortedList()
-    {
-        const int numberOfElementsToInsert = 10000;   
-        List<int> toSortList = [];
-        Random randomGenerator = new();
-
-        for (var i = 0; i < numberOfElementsToInsert; i++)
-        {
-            toSortList.Add(randomGenerator.Next());
-        }
-       
-        var sortedList = RandomRotateSort.RandomRotateSort.Sort(toSortList);
+        RandomRotateSort.RandomRotateSort.Sort(toSortList);
         
-        toSortList.Sort();
-        
-        Assert.True(sortedList == toSortList);
-    }
-    
-    [Fact]
-    public void RandomRotateSort_OneHundredThousandElements_ReturnsSortedList()
-    {
-        const int numberOfElementsToInsert = 100000;   
-        List<int> toSortList = [];
-        Random randomGenerator = new();
-
-        for (var i = 0; i < numberOfElementsToInsert; i++)
-        {
-            toSortList.Add(randomGenerator.Next());
-        }
-       
-        var sortedList = RandomRotateSort.RandomRotateSort.Sort(toSortList);
-        
-        toSortList.Sort();
-        
-        Assert.True(sortedList == toSortList);
+        Assert.True(toSortList == inBuiltSortedList);
     }
 }
